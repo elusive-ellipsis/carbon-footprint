@@ -26,9 +26,9 @@ namespace CFQuiz
             string[,] answers2 = { { "Fly?", "Drive?", "Go by bus?", "Take the train?" }, { "Intercontinental flight ", "European flight", "Train", "No holiday" }, { "Car", "Train", "Bus", "Bicycle or walk" }, { "Petrol", "Diesel", "Electric or hybrid", "None" }, { "Yes", "No", "Some of the time", "Only during lockdown" } };
             int[,] carbon2 = { { 256, 200, 110, 42 }, { 1703, 290, 30, 0 },{ 600, 373, 191, 30 },{ 4163, 3707, 1149, 0 },{ 0, 400, 200, 150 } };
 
-            string[] questions3 = { "Question 1", "Question 2", "Question 3", "Question 4", "Question 5" };
-            string[,] answers3 = { { "Question 1", "Question 2", "Question 3", "Question 4" }, { "Question 1", "Question 2", "Question 3", "Question 4" }, { "Question 1", "Question 2", "Question 3", "Question 4" }, { "Question 1", "Question 2", "Question 3", "Question 4" }, { "Question 1", "Question 2", "Question 3", "Question 4" }, };
-            int[,] carbon3 = { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } };
+            string[] questions3 = { "How often do you turn off the light when leaving a room? ", "What do you typically recycle? ", "How much of your household electricity do you generate yourself - e.g. solar panels? ", "How many bedrooms are there in your house? ", "Question 5" };
+            string[,] answers3 = { { "Always", "Most of the time", "Some of the time", "Very rarely " }, { "Glass, Cans and plastic", "Cans and plastic", "Plastic ", "Nothing" }, { "None", "1%-50%", "50%-90%", "More than 90%" }, { "1", "2", "3", "4 or more" }, { "Question 1", "Question 2", "Question 3", "Question 4" }, };
+            int[,] carbon3 = { { 0, 72, 144, 288 }, { 0, 31, 111, 211 }, { 546, 452, 264, 170 }, { 250, 446, 650, 800 }, { 1, 1, 1, 1 } };
 
             string[] questions4 = { "Question 1", "Question 2", "Question 3", "Question 4", "Question 5" };
             string[,] answers4 = { { "Question 1", "Question 2", "Question 3", "Question 4" }, { "Question 1", "Question 2", "Question 3", "Question 4" }, { "Question 1", "Question 2", "Question 3", "Question 4" }, { "Question 1", "Question 2", "Question 3", "Question 4" }, { "Question 1", "Question 2", "Question 3", "Question 4" }, };
@@ -59,6 +59,8 @@ namespace CFQuiz
                 }
                 else if (section == 3)
                 {
+                    Console.WriteLine("This section is on HOUSEHOLDS");
+                    Console.WriteLine("Carbon footprint emissions increases with the income but all houses leave a mark. Small actions can really decrease the footprint");
                     Ask(questions3, answers3, carbon3, ref carbonTotal);
                 }
                 else if (section == 4)
@@ -110,7 +112,7 @@ namespace CFQuiz
                 success = Int32.TryParse(input, out choice);
                 if (success)
                 {
-                    Console.WriteLine("Information on your choice");
+                    Console.WriteLine("This section would contain advice about what you're doing currently affects the environment and how to imrove it. We would include links and resouces to help the user lead a more sustainable life");
                 }
                 else
                 {
@@ -122,8 +124,7 @@ namespace CFQuiz
         }
         static double Calculate(double carbonTotal)
         {
-            double maxCarbon = 10428;
-            //values need to be changed as more questions are added
+            double maxCarbon = 12273;
             double minCarbon = 229;
             double output = ((carbonTotal) / (maxCarbon - minCarbon)) * 100;
             return Math.Round(output, 0);
