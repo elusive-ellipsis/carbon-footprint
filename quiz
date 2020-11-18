@@ -48,8 +48,6 @@ namespace CFQuiz
                     Console.WriteLine("This section is on FOOD");
                     Console.WriteLine("26% of global emissions come from the food we eat. Answer these simple questions to find out how you can improve and try and reduce this massive value");
                     Ask(questions1, answers1, carbon1, ref carbonTotal);
-                    Console.ReadLine();
-
                 }
                 else if (section == 2)
                 {
@@ -65,6 +63,8 @@ namespace CFQuiz
                 }
                 else if (section == 4)
                 {
+                    Console.WriteLine("This section is about EWASTE");
+                    Console.WriteLine("Waste is the fourth largest source sector of emissions, accounting for 3% of total greenhouse gas emissions in 2017 and often we throw things away unnecessarily");
                     Ask(questions4, answers4, carbon4, ref carbonTotal);
                 }
                 else if (section == 5)
