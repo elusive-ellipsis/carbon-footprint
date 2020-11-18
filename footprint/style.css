@@ -1,26 +1,39 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 body {
-  color: black;
+  color: #555;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
 #header {
-  background-color: #1ade9c;
+  background-color: #1abc9c;
   height: 150px;
-  line-height: 150px;
+  line-height: 150px
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
+#header a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em
+}
+
+#header a:hover {
+  color: #222;
 }
 
 #header-title {
   display: block;
   float: left;
-  font-size: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#header-nav {
+  display: block;
+  float: right;
+  margin-top: 0;
 }
 
 #header-nav li {
@@ -28,11 +41,13 @@ body {
   padding-left: 20px;
 }
 
-//change float to right if you want it on the other side of the site
-//for multiple links - list then display: inline;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 #footer {
-  background-color: #black;
+  background-color: #2f2f2f;
   padding: 0 0;
 }
 
@@ -43,46 +58,63 @@ body {
 }
 
 #footer h4 {
-  color: black;
+  color: white;
+  text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 #footer p {
-  color: black;
+  color: white;
 }
 
 a {
-  color: #black;
+  color: #1abc9c;
   text-decoration: none;
 }
 
 a:hover {
-  color: #22aabb;
+  color: lightBlue;
 }
 
-#earth {
+.post, .about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.post-author img {
   width: 50px;
   height: 50px;
-  margin: 5px;
+  vertical-align: middle;
+  border-radius: 25px;
 }
 
-#greeting {
-  text-align:center;
-  font-size: 25px;
-  padding: 50px;
-  margin: 50px;
-  position:relative;
-  left:100px;
+.post-author span {
+  margin-left: 16px;
 }
 
-button:hover{
-  background-color: blue;
-  color: white;
+.post-date {
+  color: #d2d2d2;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
-#start-screen{
-  height:500px;
-  width:100%;
-  left: 100px;
-  padding: 100px;
+h1, h2, h3, h4 {
+  color: #333;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.about-author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+#start-screen {
+  padding: 200px 100px 200px 100px;
 }
