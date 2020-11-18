@@ -1,3 +1,88 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 body {
-  color: blue;
+  color: black;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#header {
+  background-color: #1ade9c;
+  height: 150px;
+  line-height: 150px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#header-title {
+  display: block;
+  float: left;
+  font-size: 50px;
+}
+
+#header-nav li {
+  display: inline;
+  padding-left: 20px;
+}
+
+//change float to right if you want it on the other side of the site
+//for multiple links - list then display: inline;
+
+#footer {
+  background-color: #black;
+  padding: 0 0;
+}
+
+.column {
+  min-width: 300px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#footer h4 {
+  color: black;
+  letter-spacing: 0.1em;
+}
+
+#footer p {
+  color: black;
+}
+
+a {
+  color: #black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #22aabb;
+}
+
+#earth {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+#greeting {
+  text-align:center;
+  font-size: 25px;
+  padding: 50px;
+  margin: 50px;
+  position:relative;
+  left:100px;
+}
+
+button:hover{
+  background-color: blue;
+  color: white;
+}
+
+#start-screen{
+  height:500px;
+  width:100%;
+  left: 100px;
+  padding: 100px;
 }
