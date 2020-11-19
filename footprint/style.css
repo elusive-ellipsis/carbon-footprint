@@ -32,7 +32,7 @@ body {
 
 #header-nav {
   display: block;
-  float: right;
+  float: left;
   margin-top: 0;
 }
 
@@ -117,4 +117,16 @@ p {
 
 #start-screen {
   padding: 200px 100px 200px 100px;
+}
+
+#question-example {
+  padding: 100px 100px 100px 100px;
+}
+
+#end {
+  padding: 200px 100px 200px 100px;
+}
+
+#greeting {
+  font-size: 28px;
 }
